@@ -1,0 +1,35 @@
+/*  pop-up */
+
+body {
+  font-family: 'Wallpoet', cursive;
+}
+.pop-up {
+  display: block;
+  width: 400px;
+  height: 140px;
+  padding: 20px;
+  background-color: #00000090;
+  color: white;
+  text-align: center;
+  margin: auto;
+}
+
+.pop-up--hide {
+  display: none;
+}
+
+.pop-up__restart {
+  width: 120px;
+  height: 60px;
+  font-size: 24px;
+  background: rgb(195, 193, 34);
+  background: linear-gradient(
+    0deg,
+    rgba(195, 193, 34, 1) 0%,
+    rgba(253, 170, 45, 1) 100%
+  );
+  border: 2px solid #000;
+  border-radius: 20px;
+  color: #000;
+  font-weight: bold;
+}
