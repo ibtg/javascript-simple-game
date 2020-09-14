@@ -1,6 +1,7 @@
 'use strict';
 
 const STAR_SIZE = 80; // 상수니까 class 밖에서 선언
+import * as sound from './sound.js';
 
 export const ItemType = Object.freeze({
   star: 'star',
@@ -25,6 +26,7 @@ export class Field {
     if (target.matches('.star')) {
       target.remove();
       this.onItemClick && this.onItemClick(ItemType.star);
+      sound.playStar();
     } else if (target.matches('.blackhole')) {
       this.onItemClick && this.onItemClick(ItemType.blackhole);
     }
