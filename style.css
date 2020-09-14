@@ -28,6 +28,9 @@ body {
   background: url('./img/background.jpg');
   width: 100%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
 }
 
 .game__header {
@@ -86,7 +89,7 @@ body {
 .game__field {
   margin-top: 40px;
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
   position: relative;
 }
 
@@ -96,17 +99,27 @@ body {
   height: 30px;
 }
 
+.star:hover,
+.blackhole:hover {
+  cursor: pointer;
+}
 /*  pop-up */
 
 .pop-up {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 400px;
   height: 140px;
   padding: 20px;
   background-color: #00000090;
   color: white;
-  text-align: center;
   margin: auto;
+  position: absolute;
+  bottom: 40%;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .pop-up__hide {
@@ -127,4 +140,5 @@ body {
   border-radius: 20px;
   color: #000;
   font-weight: bold;
+  margin-bottom: 12px;
 }
