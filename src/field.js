@@ -34,8 +34,16 @@ export class Field {
 
   init() {
     this.field.innerHTML = '';
-    this._addItem('star', this.starCount, '../img/star.jpg');
-    this._addItem('blackhole', this.blackholeCount, '../img/blackhole.jpg');
+    this._addItem(
+      'star',
+      this.starCount,
+      'https://raw.githubusercontent.com/ibtg/javascript-simple-game/master/img/star.jpg'
+    );
+    this._addItem(
+      'blackhole',
+      this.blackholeCount,
+      'https://raw.githubusercontent.com/ibtg/javascript-simple-game/master/img/blackhole.jpg'
+    );
   }
 
   _addItem(className, count, imgPath) {
