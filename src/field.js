@@ -1,6 +1,6 @@
 'use strict';
 
-const STAR_SIZE = 80; // 상수니까 class 밖에서 선언
+const STAR_SIZE = 80;
 import * as sound from './sound.js';
 
 export const ItemType = Object.freeze({
