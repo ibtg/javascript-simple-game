@@ -4,16 +4,19 @@ import PopUp from './popup.js';
 import { GameBuilder, Reason } from './game.js';
 import * as sound from './sound.js';
 
-// Pop Up
-const gameFinishePopup = new PopUp();
-gameFinishePopup.setClickListener(() => {
-  game.start();
-});
+function getRandom() {
+  let time = Math.floor(Math.random() * 11) + 1;
+  let star = Math.floor(Math.random() * time * 2) + 1;
+  let blackhole = Math.floor(Math.random() * time * 2) + 1;
+  return [time, star, blackhole];
+}
+
+const gameInfo = getRandom();
 
 const game = new GameBuilder()
-  .gameDuration(5)
-  .starCount(3)
-  .blackholeCount(3)
+  .gameDuration(gameInfo[0])
+  .starCount(gameInfo[1])
+  .blackholeCount(gameInfo[2])
   .build();
 
 game.setGameStopListner((reason) => {
@@ -34,4 +37,10 @@ game.setGameStopListner((reason) => {
       throw new Error('Error');
   }
   gameFinishePopup.showWithText(message);
+});
+
+// Pop Up
+const gameFinishePopup = new PopUp();
+gameFinishePopup.setClickListener(() => {
+  game.start();
 });
