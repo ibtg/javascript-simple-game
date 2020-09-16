@@ -34,8 +34,8 @@ export class Field {
 
   init() {
     this.field.innerHTML = '';
-    this._addItem('star', this.starCount, '../img/star.png');
-    this._addItem('blackhole', this.blackholeCount, '../img/blackhole.png');
+    this._addItem('star', this.starCount, '../img/star.jpg');
+    this._addItem('blackhole', this.blackholeCount, '../img/blackhole.jpg');
   }
 
   _addItem(className, count, imgPath) {
